@@ -1,0 +1,43 @@
+TEAM ROLES
+
+client manager:
+project manager:
+editor:
+chief architect:
+
+
+
+
+
+Team Roles. 
+Identify your client manager, project manager, editor and chief architect.
+
+The client manager is the point of contact for the client. It is his or her responsibility to
+assure that meetings are appropriately scheduled with the client and any consultants,
+request feedback or clarifications from the client,
+be the recipient of requirements changes from the client, and
+notify the client of significant changes in deliverables and schedule.
+
+The project manager is responsible for maintaining the integrity of the schedule and communication with the "boss" (a.k.a., me!). It is his or her responsibility to
+assure that meetings with the professor are appropriately scheduled,
+assure that team meetings are appropriately scheduled,
+assure that team members are aware of their responsibilities and deadlines, and
+help the team reassign responsiilities when necessary, and
+maintain the project plan.
+
+The editor is responsible for maintaining the quality and consistency of all formal documents. It is his or her responsibility to
+assure that documents have the correct content,
+know who is writing all pieces of the documents,
+assure that appropriate version control is used,
+edit the final versions of the document in order to assure consistent style, and
+post documents when and where they are expected.
+It is NOT his or her responsibility to write all documents.
+
+The chief architect is responsible for maintaining the quality and consistency of the final deliverable. It is his or her responsibility to
+produce the high level design with the participation and agreement of the team,
+validate that design changes do not impact the integrity of the project,
+arbitrate design discrepancies,
+confirm that design changes are appropriately reflected in the documentation,
+represent the user's point of view in reviewing interface designs, and
+help assure that team assignments will support rather than destroy the product design integrity.
+It is NOT his or her responsibility or prerogative to usurp all design decisions.

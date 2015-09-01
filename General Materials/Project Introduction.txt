@@ -1,0 +1,2 @@
+PROMPT:
+Project Introduction. This is a high level 2-3 sentence description that introduces the casual observer to the project. A visitor to your website should be able to read this description and understand what you are doing and why. It is the information that would show up in a google search. Recognize that there is in addition the project concept. This is just a bit of a teaser to get the reader started.
