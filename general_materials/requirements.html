@@ -1,11 +1,43 @@
-0) design or find an implementation of PFS that suits our needs
- 0.0) understand encryption and decryption in frame of PFS
-1) design and implement message structure for storing encrypt(message + recipients), key headers, nonce
-2) understand and utilize existing code to move text to and from clipboard (current implementation done by winston)
-3) understand and utilize existing code to catch ~~grdme~~ tags
-4) implement code to extract data from tags
-5) implement database lookups for nonce
-6) implement contact book in database, with support for groups and auto add for contact groups when proliferated as recipients
-7) implement database export/import
-8) implement key sharing/fetching from manual keyshares, github/twitter/etc, keyserver
-9) 
+<html>
+    <body>
+        <h1>Requirements</h1>
+        
+        <ul>
+            <li><h3>Functional</h3></li>
+                <ul>
+                    <li>(1st) User should be able to send message to another single user using a PFS implementation</li>
+                    <ul>
+                        <li>(1st) Design message structure that has start/end tages, ky, recipient(s), and message</li>
+                        <li>(1st) Implements database back end (local) for PFS that stores messages and user keys</li>
+                        <li>(1st) Lookup messages in database using nonce</li>
+                    </ul>
+                    <li>(2nd) User should be able to send message to a group of other users using a PFS implementation</li>
+                    <li>(3rd) Contact keys should be autofetched based on anticipating recipient</li>
+                </ul>
+            <li><h3>Usability</h3></li>
+                <ul>
+                    <li>(3rd) Must give user the option to change shortcut keys</li>
+                    <li>(2nd) Must give user the option to make a list of sites to show/hide lock icons on.</li>
+                    <li>(2nd) Must give user the option to export database containing keys and messages</li>
+                    <li>(stretch) Stegonography based key sharing</li>
+                </ul>
+            <li><h3>Error Handling</h3></li>
+                <ul>
+                    <li>(1st) When decryption faild b/c of truncation, etc, display error message, but no user facing encryption</li>
+                    <li>(1st) Handle injection attcks</li>
+                </ul>
+            <li><h3>Interface</h3></li>
+                <ul>
+                    <li>(1st) Make pop-up window the only option for inputing text</li>
+                    <li>(1st) Add contact list to pop-up to choose recipients</li>
+                    <li>(2nd) Add contact database manipulation interface (change contact info, nickname, etc)</li>
+                </ul>
+            <li><h3>Constraints</h3></li>
+                <ul>
+                    <li>(1st) Implement for both chrome and firefox</li>
+                    <li>No backward compatibility requirements</li>
+                </ul>
+        </ul>
+
+    </body>
+</html>
