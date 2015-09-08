@@ -1,56 +1,85 @@
 <!DOCTYPE html>
    <body>
       <h1>Use Cases</h1>
-      <h2>Standard User</h2>
-      <p>for this application there is really only one type of user, a standard user</p>
-      <p>there is also no adiminstrative function as all operations are initiated by the client</p>
-      <h3>install extension</h3>
-      <h3>auto launch or boolean if_no_key toggle</h3>
-      <h3> generate keys</h3>
-       <h4>optional) encrypt message database</h4>
-       <h4>optional) import message database</h4>
-      <h3>import/get peer keys</h3>
-       <h4>stego</h4>
-       <h4>keyserver</h4>
-       <h4>manually</h4>
-        <h5>button in extension window to generate prekey and copy to clipboard</h5>
-      <h3>maybe later) multikey support</h3>
-      <h3>force winston) remove insecure messaging</h3>
-      <h2>sending</h2>
-      <h3>ctrl + e or click lock icon on right side of selected text box</h3>
-      <h3>look for dom related grdme element</h3>
-      <h4>find nonce</h4>
-      <h4>look up in db</h4>
-      <h4>fetch recipients</h4>
-      <h4>prepopulate recipients field</h4>
-      <h3>type text in popup</h3>
-      <h3>select contacts [or contact groups] below text box</h3>
-      <h4>sort alphabetically with top 5 in header</h4>
-      <h5>maybe) contact photos</h5>
-      <h3> ctrl + e or click button to copy to clipboard [close popup]</h3>
-      <h3>store message + nonce + recipients</h3>
-      <h3>paste from clipboard</h3>
-      <h3>send</h3>
-      <h2>recieving</h2>
-      <h3>get message surrounded with ~~grdme~~ ~~!grdme~~</h3>
-      <h3>magical javascript intercepts it</h3>
-      <h3>check if nonce is in db</h3>
-      <h4>if it is swap element with message in db</h4>
-      <h3>try to decrypt</h3>
-      <h4>if success</h4>
-      <h4>update key information from message </h4>
-      <h4>store message + nonce + recipients to db</h4>
-      <h4>swap ement with message</h4>
-      <h2>export message database</h2>
-      <h3>go to menu</h3>
-      <h3>click export</h3>
-      <h3>get file browser</h3>
-      <h3>save in location of your choice</h3>
-      <h4>if encrypted save encrypted, if not save not</h4>
-      <h2>Streach Features</h2>
-      <h3>settings option blacklist lock icon + disable buttons</h3>
-      <h3>add options link in key manager menu</h3>
-      <h3>change shorcut command</h3>
-      </pre>
+      <ul>
+         <li><h2>Standard User</h2></li>
+            <ul>
+               <p>for this application there is really only one type of user, a standard user; there is also no adiminstrative function as all operations are initiated by the client</p>
+               <li><h3>install extension</h3></li>
+               <li><h3>auto launch or boolean if_no_key toggle</h3></li>
+               <li><h3> generate keys</h3></li>
+               <ul>
+                  <li><h4>optional) encrypt message database</h4></li>
+                  <li><h4>optional) import message database</h4></li>
+               <ul>
+               <li><h3>import/get peer keys</h3></li>
+               <ul>
+                  <li><h4>stego</h4></li>
+                  <li><h4>keyserver</h4></li>
+                  <li><h4>manually</h4></li>
+                  <ul>
+                     <li><h5>button in extension window to generate prekey and copy to clipboard</h5></li>
+                  </ul>
+               </ul>
+               <li><h3>maybe later) multikey support</h3></li>
+               <li><h3>force winston) remove insecure messaging</h3></li>
+            </ul>
+            <li><h2>sending</h2></li>
+            <ul>
+               <li><h3>ctrl + e or click lock icon on right side of selected text box</h3></li>
+               <li><h3>look for dom related grdme element</h3></li>
+               <ul>
+                  <li><h4>find nonce</h4></li>
+                  <li><h4>look up in db</h4></li>
+                  <li><h4>fetch recipients</h4></li>
+                  <li><h4>prepopulate recipients field</h4></li>
+               </ul>
+               <li><h3>type text in popup</h3></li>
+               <li><h3>select contacts [or contact groups] below text box</h3></li>
+               <ul>
+                  <li><h4>sort alphabetically with top 5 in header</h4></li>
+               </ul>
+                  <ul>
+                     <li><h5>maybe) contact photos</h5></li>
+                  </ul>
+               <li><h3> ctrl + e or click button to copy to clipboard [close popup]</h3></li>
+               <li><h3>store message + nonce + recipients</h3></li>
+               <li><h3>paste from clipboard</h3></li>
+               <li><h3>send</h3></li>
+            </ul>
+            <li><h2>recieving</h2></li>
+            <ul>
+               <li><h3>get message surrounded with ~~grdme~~ ~~!grdme~~</h3></li>
+               <li><h3>magical javascript intercepts it</h3></li>
+               <li><h3>check if nonce is in db</h3></li>
+               <ul>
+                  <li><h4>if it is swap element with message in db</h4></li>
+               </ul>
+               <li><h3>try to decrypt</h3></li>
+               <ul>
+                  <li><h4>if success</h4></li>
+                  <li><h4>update key information from message </h4></li>
+                  <li><h4>store message + nonce + recipients to db</h4></li>
+                  <li><h4>swap ement with message</h4></li>
+               </ul>
+            </ul>
+            <li><h2>export message database</h2></li>
+            <ul>
+               <li><h3>go to menu</h3></li>
+               <li><h3>click export</h3></li>
+               <li><h3>get file browser</h3></li>
+               <li><h3>save in location of your choice</h3></li>
+               <ul>
+                  <li><h4>if encrypted save encrypted, if not save not</h4></li>
+               </ul>
+            </ul>
+            <li><h2>Streach Features</h2></li>
+            <ul>
+               <li><h3>settings option blacklist lock icon + disable buttons</h3></li>
+               <li><h3>add options link in key manager menu</h3></li>
+               <li><h3>change shorcut command</h3></li>
+            </ul>
+         </ul>
+      </ul>
    </body>
 </html>
