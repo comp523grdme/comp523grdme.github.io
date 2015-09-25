@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h1>Tech Talk Topics</h1>
+      <h2>Improvements to Encryption Protocols</h2>
+      <ul><li><h4>We assume that encryption can be treated like a black box, and thus is outside of the scope of this talk.</h4></li></ul>
+      <h3>Long Term Keys</h3>
+      <h4>Design</h4>
+      <ul><li><h5>Easiest model, simply pick a key and use it forever.</h5></li></ul>
+      <h4>Problems</h4>
+      <ul><li><h5>Messages can be decrypted by key leakage and bruteforcing.</h5></li></ul>
+      <h3>Future Secrecy</h3>
+      <h4>Design</h4>
+      <ul>
+         <li><h5>Hash each key to get the next key, and delete keys after decryption because they are only used once.</h5></li>
+         <li><h5>This model relies on the trapdoor nature of hash functions to prevent decryption of historical messages on key leakage and reduces likelyhood of leakage by removing keys as soon as possible.</h5></li>
+      </ul>
+      <h4>Problems</h4>
+      <ul><li><h5>Key leakage does not protect messages moving forward.</h5></li></ul>
+      <h3>Perfect Forward Secrecy</h3>
+      <h4>Design</h4>
+      <ul>
+         <li><h5>Each message uses a session encryption key, that is unrelated between messages, and keys are deleted after decryption because they are only used once.</h5></li>
+         <li><h5>Key leakage only affects one message and likelyhood of leakage is reduced by removing keys as soon as possible.</h5></li>
+      </ul>
+      <h4>In-Depth</h4>
+      <ul>
+         <li><h5><a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Diffie Helman</a></h5></li>
+         <li><h5><a href="https://en.wikipedia.org/wiki/Off-the-Record_Messaging">OTR</a></h5></li>
+         <li><h5><a href="https://whispersystems.org/blog/asynchronous-security/">Axolotl</a></h5></li>
+         <li><h5><a href="https://en.wikipedia.org/wiki/Malleability_(cryptography)">Malleability/Deniability</a></h5></li>
+   </body>
+</html>
