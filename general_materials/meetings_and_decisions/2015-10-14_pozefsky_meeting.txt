@@ -1,0 +1,13 @@
+add github link to comp523grdme.github.io
+work on resizability
+
+remove static body define is css, this should make it editable
+
+allow ungrouped contacts to be added to multiple groups at once
+add new group
+should we allow out of band id sharing?
+
+change advanced settings to a expandable menu
+import keychain → restore
+export keychain → backup
+delete encrypt keychain
