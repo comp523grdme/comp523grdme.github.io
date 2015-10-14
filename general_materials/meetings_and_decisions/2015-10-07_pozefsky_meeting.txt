@@ -1,0 +1,14 @@
+we discussed the demo, our mockups and revised the ui design and finalized ui things
+
+
+
+add a noun to import and export
+add support for database cleanup
+allow user lock in current size fo 
+we need a development location for server stuff
+rate limiting on registration
+
+plan out and test simplied install for diane
+
+
+
