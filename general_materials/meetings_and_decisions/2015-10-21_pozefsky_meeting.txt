@@ -1,0 +1,8 @@
+use end delimiter '))' to fail gracefully
+make network flow diagrams
+make a design document that captures all of the library decisions, shortcut decision, advanced settings api decision, why? couchdb, 
+test how portable state transfer is with chrome profiles
+work to build the design doc as we go
+ed: make the tabs more tabby
+break apart " (ditto marks) into actual tasks
+
