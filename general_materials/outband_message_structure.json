@@ -1,0 +1,37 @@
+"Grd_Me_Message": {
+  "version": "<byte>",
+  "Message": {
+    "ephemeralKey": "<256 bytes>",
+    "counter": "<32 bit int>",
+    "previousCounter": "<32 bit int>",
+    "ciphertext": {}
+  },
+  "mac": "<8 bytes>"
+},
+
+"decrypted ciphertext": {
+  "message_type": "<byte>",
+  ...
+},
+
+"decrypted ciphertext": {
+  "message_type": "<message>",
+  "body": "<bytes>"
+},
+
+"decrypted ciphertext": {
+  "message_type": "<group_share>",
+  "group_petname": "<32 chars>",
+  "group_id": "<256 bits>",
+  "user_ids": [
+    {
+      "petname": "<A_petname>",
+      "id": "A×G"
+    },
+    {
+      "petname": "<B_petname>",
+      "id": "B×G"
+    },
+    ...
+  ]
+}
