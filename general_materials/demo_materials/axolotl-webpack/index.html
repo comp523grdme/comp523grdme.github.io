@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <pre>    Sending     |     Receiving
+MK      CK      RK      CK      MK
+--      --      --      --      --
+   ECDH(A0,B0)  + 
+               /|
+              / |
+             /  +  ECDH(A1,B1) 
+     CK-A1-B0    \
+         |        \
+ MK-0  --+         \
+         |          CK-A1-B1
+ MK-1  --+              |
+         |              +--  MK-0  
+ MK-2  --+              |
+                        +--  MK-1</pre>
+        <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+    </body>
+</html>
