@@ -1,0 +1,32 @@
+<!doctype html>
+<body>
+<pre>
+message: {
+	messageID: {
+		ciphertext: string
+		plaintext: string
+		contact: string key
+		group: string key
+		timestamp: int
+	}
+}
+
+groups: {
+	“name” : {
+		id: base64 encoded
+		contact_ids: [‘nameA’, ‘nameB’, …]
+	}
+}
+
+contacts: {
+	“name”: {
+			public: “…”
+			devices: [
+					{ registration_id: int
+					  session: Session object
+					}
+				]
+			}
+}
+</pre>
+</body>
