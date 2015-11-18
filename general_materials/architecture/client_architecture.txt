@@ -1,0 +1,44 @@
++------------------------------------------------+ +------------------------------------------------------------------------------------------+
+| background_page.js [think of as out-band.js]   | | context_script.js [think of as in-band.js]                                               |
+| (runs on browser start)                        | | (runs once per per page)                                                                 |
+|                                                | |                                                                                          |
+| var store = storage.get("store")               | | var tags = DOM.search("((GrdMe!")                                                        |
+| var settingsDB = storage.get("settingsDB")     | | for tag in tags:                                                                         |
+| var contactDB = storage.get("contactDB")       | |   var message = getBackgroundPage().messageDB.get(tag.id)                                |
+| var groupDB = storage.get("groupDB")           | |   if message == null:                                                                    |
+| var messageDB = storage.get("messageDB")       | |     DOM.replace(tag,GrdMe_error_html_element)                                            |
+|                                                | |   else:                                                                                  |
+| var axolotl = require('axolotl')               | |     if message.get('cleartext') == null:                                                 |
+| var axolotl-crypto = require('axolotl-crypto') | |       message.cleartext = getBackgroundPage().axolotl-crypto.decrypt(message.ciphertext) |
+|                                                | |       del message.ciphertext                                                             |
+| initialize_websocket()                         | |       storage.save("messageDB",getBackgroundPage().messageDB)                            |
+| while(1)                                       | |     DOM.replace(tag,generate_decrypted_tag(cleartext))                                   |
+|   recieve_outband_message()                    | +------------------------------------------------------------------------------------------+
+|   process_outband_message()                    | +------------------------------------------------------------------------------------------+
++------------------------------------------------+ | browser_action.js                                                                        |
++------------------------------------------------+ | (runs when browser action is opened)                                                     |
+| options.js                                     | |                                                                                          |
+| (runs when options is opened)                  | | /* Needs to handle install, group management, contact management, basic settings and     |
+|                                                | |  * display a log of sent messages; note this will be user driven JS and need to heavily  |
+| /* Mirror functionality from current version,  | |  * customize the browser action to show different context on install                     |
+|  * note that this will be user driven JS       | |  */                                                                                      |
+|  */                                            | |                                                                                          |
+| var tmp_advanced_settings                      | | if store == null:                                                                        |
+|                                                | |   preform_install() //this will populate the store object and store it back to disk      |
+| //functions to keep state of selected options  | | display_popup_html()                                                                     |
+| //submit function triggered on save            | |                                                                                          |
+| var submit = function(){                       | | //this type method should exist for any mutable DB                                       |
+|   var settingsDB = storage.get("")             | | def on_contact_change(change, function(){                                                |
+|   settingsDB.advanced = tmp_advanced_settings  | |   getBackgroundPage().contactDB.get("id").element = change                               |
+|   storage.save(settingsDB)                     | |   storage.save("contactDB",getBackgroundPage().contactDB)                                |
+| }                                              | | })                                                                                       |
++------------------------------------------------+ +------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+| event_page.js [think of as secureTextPopup.js]                                                                                              |
+| (runs after keyboard shortcut Ctrl+E, should be triggered by an event listener)                                                             |
+|                                                                                                                                             |
+| /* Needs to handle message composition, group selection and message submission: composition can be stolen from existing functionality;      |
+|  * group selection will be new, user driven and refrence getBackgroundPage().groupDB; submission will hook onto a function define in        |
+|  * background_page.js, with a callback that handles the intracies of submission: getBackgroundPage().submitMessage(groupId,message)         |
+|  */                                                                                                                                         |
++---------------------------------------------------------------------------------------------------------------------------------------------+
