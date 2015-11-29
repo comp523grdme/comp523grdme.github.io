@@ -5,10 +5,26 @@
       <ul>
          <li><h2>In Band</h2></li>
          <ul>
-            <li><h3>message: ((GrdMe!&lt;base64(&lt;4bits:version>&lt;4bits:type>&lt;11bits:time>&lt;245bits:nonce>&lt;256:innerkey>)>))<h3></li>
-            <li><h3>    key: ((GrdMe!&lt;base64(&lt;4bits:version>&lt;4bits:type>&lt;256bits:id>&lt;256bits/32chars:petname>)>))</h3>
+            <li><h3>message: "((GrdMe!"+base64(version)+base64(type)+base64(time_nonce)+base64(inner_key)+"))"<h3></li>
+            <ul>
+              <li><h4>version: 5 bits</h4></li>
+              <li><h4>type: 5 bits</h4></li>
+              <li><h4>time_nonce: 256 bits</h4></li>
+              <ul>
+                <li><h5>time: 11 bits</h5></li>
+                <li><h5>nonce: 245 bits</h5></li>
+              </ul>
+              <li><h4>inner_key: 256 bits</h4></li>
+            </ul>
+            <li><h3>    key: "((GrdMe!"+base64(version)+base64(type)+base64(time_nonce)+base64(inner_key)+"))"</h3>
+            <ul>
+              <li><h4>version: 5 bits</h4></li>
+              <li><h4>type: 5 bits</h4></li>
+              <li><h4>id: 256 bits</h4></li>
+              <li><h4>petname: 256 bits / 32 chars</h4></li>
+            </ul>
          </ul>
          <li><h2><a href="https://github.com/WhisperSystems/TextSecure/wiki/ProtocolV2#whispermessage">Out Band</a></h></li>
       </ul>
    </body>
-</html>
+d/html>
