@@ -2,31 +2,65 @@
 <body>
 <pre>
 message: {
-	messageID: {
-		ciphertext: string
-		plaintext: string
-		contact: string key
-		group: string key
-		timestamp: int
-	}
+  messageID: {
+    ciphertext: string,
+    plaintext: string,
+    contact: string key,
+    group: string key,
+    timestamp: int,
+ },
 }
 
 groups: {
-	“name” : {
-		id: base64 encoded
-		contact_ids: [‘nameA’, ‘nameB’, …]
-	}
+  "name" : {
+    id: base64 encoded nonce,
+    contact_ids: ['nameA', 'nameB', …],
+ },
 }
 
 contacts: {
-	“name”: {
-			public: “…”
-			devices: [
-					{ registration_id: int
-					  session: Session object
-					}
-				]
-			}
+  "name": {
+    public: base64-arraybuffer (pubkey),
+    devices: [
+      {
+        registration_id: int,
+        session: {
+          states: {
+            new Number(): {
+              localIdentityKey: base64-arraybuffer,
+              localRegistrationId: new Number(),
+              recievingChains: [
+                new Number(): {
+                  chain: {
+                    index: new Number(),
+                    key: base64-arraybuffer,
+                    messageKeys: [
+                      //currently zero length need to figure out when this is populated
+                    ],
+                    theirEphemeralKey: base64-arraybuffer,
+                  },
+                  theirEphemeralKey: base64-arraybuffer,
+                }
+              ],
+              remoteIdentityKey: base64-arraybuffer,
+              rootKey: base64-arraybuffer,
+              senderRatchetKeyPair: { keypair },
+              sendingChain: {
+                index: new Number(),
+                key: base64-arraybuffer,
+                messageKeys: [
+                  //currently zero length need to figure out when this is populated
+                ],
+              },
+              sessionVersion: 3, //yes, this is currently hardcoded
+              theirBaseKey: null, //currently null need to figure out when this is populated
+            }
+          }
+        }
+      }
+      ...
+    ],
+  }
 }
 </pre>
 </body>
