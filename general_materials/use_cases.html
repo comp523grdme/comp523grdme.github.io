@@ -1,57 +1,59 @@
 <!DOCTYPE html>
-   <body>
-      <h1>Use Cases</h1>
-      <ul>
-         <li><h2>Standard User</h2></li>
+    <body>
+        <h1>Use Cases</h1>
+        <h2>Standard User</h2>
+        <ul>
+            <p>for this application there is really only one type of user, a standard user; there is also no adminstrative function as all operations are initiated by the client</p>
+            <li><h3>Install extension</h3></li>
+            <li><h3>On first launch, generate keys</h3></li>
             <ul>
-               <p>for this application there is really only one type of user, a standard user; there is also no adminstrative function as all operations are initiated by the client</p>
-               <li><h3>Install extension</h3></li>
-               <li><h3>On first launch, generate keys</h3></li>
-               <ul>
-                  <li><h4>optional) import message database</h4></li>
-               <ul>
-               <li><h3>import/get peer keys</h3></li>
-               <ul>
-                  <li><h4>stego</h4></li>
-                  <li><h4>keyserver</h4></li>
-                  <li><h4>manually</h4></li>
-                  <ul>
-                     <li><h5>button in extension window to generate prekey and copy to clipboard</h5></li>
-                  </ul>
-               </ul>
+                <li><h3>import/get peer keys</h3></li>
+                <ul>
+                    <li><h4>keyserver</h4></li>
+                    <li><h4>manually</h4></li>
+                </ul>
             </ul>
+
+            <li><h2>Sharing your key</h2></li>
+            <ul>
+                <li>button in extension drop-down to copy longterm identity key to clipboard</li>
+                <li>Paste this key somewhere public on the internet</li>  
+            </ul>
+
             <li><h2>Send a message</h2></h2></li>
             <p>All messages are sent to groups, even if it message is for one person</p>
             <ul>
-               <li><h3>type text in popup</h3></li>
-               <li><h3>select contact groups below text box</h3></li>
-               <li><h3> ctrl + e or click button to copy to clipboard [close popup]</h3></li>
-               <li><h3>paste from clipboard</h3></li>
-               <li><h3>send to group</h3></li>
+                <li><h3>type text in popup</h3></li>
+                <li><h3>select contact groups below text box</h3></li>
+                <li><h3> ctrl + e or click button to copy to clipboard [close popup]</h3></li>
+                <li><h3>paste from clipboard</h3></li>
+                <li><h3>send to group</h3></li>
             </ul>
+
             <li><h2>Receive a message</h2></li>
             <p>All messages are received by the individuals who are part of the group the message was sent to</p>
             <ul>
-               <li><h3>See a message surrounded with ~~grdme~~ ~~!grdme~~</h3></li>
-               <li><h3>Attempt to decrypt with set of keys to see if message meant for user</h3></li>
+                <li><h3>See a message surrounded with ~~GrdMe~~ ~~!GrdMe~~</h3></li>
+                <li><h3>Attempt to decrypt with set of keys to see if message meant for user</h3></li>
             </ul>
+
             <li><h2>Export a message to the database</h2></li>
             <ul>
-               <li><h3>go to menu</h3></li>
-               <li><h3>click export</h3></li>
-               <li><h3>get file browser</h3></li>
-               <li><h3>save in location of your choice</h3></li>
-               <ul>
-                  <li><h4>if encrypted save encrypted, if not save not</h4></li>
-               </ul>
+                <li><h3>go to menu</h3></li>
+                <li><h3>click export</h3></li>
+                <li><h3>get file browser</h3></li>
+                <li><h3>save in location of your choice</h3></li>
+                <ul>
+                    <li><h4>if encrypted save encrypted, if not save not</h4></li>
+                </ul>
             </ul>
+
             <li><h2>Stretch Features</h2></li>
             <ul>
-               <li><h3>add options link in key manager menu</h3></li>
-               <li><h3>change shorcut command</h3></li>
-               <li><h3>multikey support</h3></li>
+                <li><h3>add options link in key manager menu</h3></li>
+                <li><h3>change shorcut command</h3></li>
+                <li><h3>multikey support</h3></li>
             </ul>
-         </ul>
-      </ul>
-   </body>
+        </ul>
+    </body>
 </html>
