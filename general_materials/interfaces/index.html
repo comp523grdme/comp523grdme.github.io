@@ -4,15 +4,26 @@
         <ul>
             <li><h2>Dropdown (upper right corner)</h2></li>
                 <ul>
-                    <li>This interface will be a dropdown menu that is displayed by clicking the grd me icon in the upper right corner of the browser. It will present a tabbed view will have a tab for (1) Encryption and Key sending, (2) Group/Contact Management, (3) Settings.</li>
-                    <li>Current Implementation:<br> <img src="interface_images/main_drop_down.png" alt="main_interface" style="width:415px;height:524px;"></li>
+                    <li><h3>**NOTE: The planned 'messages' tab has been moved from this interface to the Pop-up Window (described below) after it was dicovered that the dropdown cannot be triggred by a keyboard shortcut**</h3></li>
+                    <li>This interface will be a dropdown menu that is displayed by clicking the grd me icon in the upper right corner of the browser. It will present a tabbed view will have a tab for (1) Group/Contact Management, (2) Settings.</li>
+                    <li>Current Implementation:<br> <img src="main_drop_down.png" alt="main_interface" style="width:415px;height:524px;"></li>
                     <li>Sketches of new tab structure:</li>
                     <ul>
-                        <li><h3><a href="https://comp523grdme.github.io/general_materials/interfaces/main_view_photo.PNG">Message</a></h3></li>
                         <li><h3><a href="https://comp523grdme.github.io/general_materials/interfaces/group_view_photo.PNG">Groups</a></h3></li>
                         <li><h3><a href="https://comp523grdme.github.io/general_materials/interfaces/settings_view_photo.PNG">Settings</a></h3></li>
                     </ul>
                 </ul>
+                <li><h2>Pop-up Window (Protected Textbox)</h2></li>
+                    <ul>
+                        <li><h3>**NOTE: This interface component has been added after it was dicovered that the dropdown cannot be triggred by a keyboard shortcut**</h3></li>
+                        <li>This window will be displayed by the keyboard shortcut [ctrl]/[cmd]+e</li>
+                        <li>Its primary purpose is to protect the clear text message from sites that capture partially written messages (Facebook)</li>
+                        <li>Its secondary purpose is to allow the user to select which group of contacts he/she is communicating with. This selection will occur with a list of contact groups below the textbox, with the previously used group being preselected.</li>
+                        <li>Once the message is typed, [ctrl]/[cmd]+e or clicking a button will copy the encrypted message to the user's clipboard and close the window.</li>
+                        <li>The interface will remain similar to the current implementation (see image below), but with the addition of the group selection and "encrypt" button elements below the textbox.</li>
+                        <li>Starting State:<br><img src="protected_textbox.png" alt="protected_textbox" style="width:323px;height:280x;"> </li>
+                        <li>Sketch of planned apearance: *note, this sketch was drawn as an interface that was part of the dropdown menu. The contents of this interface will remain the same, but will be relocated to this pup up.<br><img src="main_view_photo.PNG" alt="planned_protected_textbox" style="width:330px"></li>
+                    </ul>
             <li><h2>Keyboard Shortcuts</h2></li>
                 <ul>
                     <li>The user will primarily use keyboard shortcuts to interact with grd me durring regular use (sending encrypted messages)</li>
@@ -22,9 +33,9 @@
                 <ul>
                     <li>Grd Me replaces encrypted messages (identified by an opening and closing tag) on a page with clear text automaticly.</li>
                     <li>Decrypted clear text will be accompaied by the Grd Me lock logo and will appear buld when you hover over the lock.</li>
-                    <li>Clear text will be inserted back into the page in its own iframe so that the webiste cannot access th decrypted message</li>
+                    <li>Clear text will be inserted back into the page in its own iframe so that the webiste cannot access the decrypted message</li>
                     <li>This process will require no action from the user</li>
-                    <li><li><img src="interface_images/autoreplace_text.png" alt="protected_textbox" style="width:1004px;height:252x;"></li>
+                    <li><li><img src="autoreplace_text.png" alt="protected_textbox" style="width:1004px;height:252x;"></li>
                 </ul>
                 <li><h2>Automatic Key Detection</h2></li>
                     <ul>
@@ -37,16 +48,6 @@
                 <ul>
                     <li>This will be accessed through the browser's extension management window (i.e. browser > extensions > Grd Me > options)</li>
                     <li>It will contain more advanced options, such as importing/exporting a database of recieved messages.</li>
-                </ul>
-            <li><h2>Pop-up Window (Protected Textbox)</h2></li>
-                <ul>
-                    <li><h3>**This interface component has been replaced by the tabbed drop down, and will no longer be a part of the program**</h3></li>
-                    <li>This window will be displayed by the keyboard shortcut [ctrl]/[cmd]+e</li>
-                    <li>Its primary purpose is to protect the clear text message from sites that capture partially written messages (Facebook)</li>
-                    <li>Its secondary purpose is to allow the user to select which group of contacts he/she is communicating with. This selection will occur with a list of contact groups below the textbox, with the previously used group being preselected.</li>
-                    <li>Once the message is typed, [ctrl]/[cmd]+e or clicking a button will copy the encrypted message to the user's clipboard and close the window.</li>
-                    <li>The interface will remain similar to the current implementation (see image below), but with the addition of the group selection and "copy" button elements below the textbox.</li>
-                    <li><img src="interface_images/protected_textbox.png" alt="protected_textbox" style="width:323px;height:280x;"> </li>
                 </ul>
         </ul>
     </body>
